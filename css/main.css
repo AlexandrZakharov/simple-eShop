@@ -1,0 +1,211 @@
+body {
+  background: #F2F2F2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #B7B7B6;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=text] {
+  outline: none;
+}
+.header {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
+
+}
+
+.header a {
+  display: inline-block;
+  padding: 11px 0;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.user-block__account {
+  margin-right: 20px;
+}
+
+.user-block__account-link {
+  margin-left: 20px;
+}
+
+.user-block__basket {
+  background: #222222;
+  display: block;
+}
+
+.user-block__basket:hover,
+.user-block__basket a:hover {
+  background: #141414;
+  color: #fff;
+}
+
+.user-block__basket a {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #B7B7B6;
+}
+
+.user-block__basket i {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* ======== Dropdown menu ======== */
+
+.user-form {
+  margin: 0;
+  border-radius: 0;
+  min-width: 300px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.user-btn {
+  background: #222222;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.user-btn a {
+  color: #B7B7B6;
+  width: 100%;
+  font-size: 14px;
+}
+
+.user-btn:hover {
+  background: #141414;
+}
+.user-btn > a:hover {
+
+  color: #fff;
+}
+
+.user-input {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* ======== Register form ======== */
+
+.modal {
+ 
+}
+
+.modal-dialog {
+  width: 400px;
+}
+
+.first-name {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.last-name {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.modal-header {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 4px 0;
+}
+
+.modal-header h2 {
+  margin-bottom: 20px;
+}
+
+.reg-btn {
+  margin-top: 35px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ======== Goods ======== */
+
+.goods {
+  margin-top: 40px;
+}
+
+.items {
+  background: #fff;
+  height: 3000px;
+}
+
+.items-wrapper {
+  padding: 10px 10px;
+}
+
+.item {
+  padding: 18px 10px;
+}
+
+.card {
+  height: 100%;
+  border: none;
+}
+
+.card-price {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  margin: 10px auto 0 0;
+  font-size: 15px;
+  color: rgb(254, 102, 3);
+}
+
+.card-img-wrapper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.product-name {
+  color: rgb(51, 51, 51);
+}
+
+.product-description {
+  color: rgb(153, 153, 153);
+}
+
+.product-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.product-button a {
+  color: rgb(254, 102, 3);
+  border: 2px solid rgb(254, 102, 3);
+  border-radius: 20px;
+  padding: 5px 30px;
+}
+
+.product-button a:hover {
+  background: rgb(254, 102, 3);
+  color: #fff;
+}
