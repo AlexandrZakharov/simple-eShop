@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="libs/font-awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="libs/fonts/fonts.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row d-flex justify-content-between">
+        <div class="logo">
+          <a href="#" class="menu-item">eShop</a>
+        </div>
+        <div class="user-block d-flex">
+          <div class="user-block__account dropdown">
+            <a class="dropdown user-block__account-link menu-item" href="#" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Account</a>
+            <div class="dropdown-menu admin-dropdown">
+              <a class="dropdown-item" href="#">Edit Profile</a>
+              <a class="dropdown-item" href="#">Admin panel</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </div>
+          <div class="user-block__basket">
+            <a href="#" class="menu-item"><i class="fas fa-shopping-cart"></i>Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="goods">
+    <div class="container items">
+      <div class="items-wrapper">
+        <div class="row">
+          <div class="item col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-img-wrapper">
+                <a href="#" class="product-link">
+                  <img src="https://sun9-72.userapi.com/c851332/v851332526/44168/x5BfYcklxnI.jpg" class="card-img-top"
+                    alt="...">
+                </a>
+              </div>
+              <a href="#" class="delete-card">
+                <i class="fas fa-times"></i>
+              </a>
+              <div class="card-body">
+                <span class="card-price">$149,99</span>
+                <a href="#" class="product-link">
+                  <span class="product-name">Product name</span>
+                  <span class="product-description">/ product description</span>
+                </a>
+              </div>
+              <a href="#" class="product-button">Add to shopping cart</a>
+            </div>
+          </div>
+          <div class="item col-lg-3 col-md-6">
+            <div class="card">
+              <a href="#" class="product-link">
+                <div class="card-img-wrapper add-img">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </a>
+              <div class="card-body">
+                <form action="">
+                  <input type="number" class="user-input" placeholder="Price">
+                  <input type="text" class="user-input" placeholder="Product name">
+                  <input type="text" class="user-input" placeholder="Desciption">
+                </form>
+              </div>
+              <a href="#" class="product-button"><i class="fas fa-plus confirm-product"></i>Add new product</a>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- Vendor Scripts -->
+  <script src="libs/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
