@@ -33,7 +33,7 @@
             <a class="dropdown user-block__account-link menu-item" href="#" id="dropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Account</a>
             <div class="dropdown-menu admin-dropdown">
-              <a class="dropdown-item" href="#">Edit Profile</a>
+              <a class="dropdown-item" href="#">Delete Account</a>
               <a class="dropdown-item" href="admin-panel.html">Admin panel</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="index.html">Log out</a>
@@ -67,6 +67,7 @@
                   <span class="product-name">Product name</span>
                   <span class="product-description">/ product description</span>
                 </a>
+                <span class="card-text"><small class="text-muted">#Some #Tags</small></span>
               </div>
               <a href="#" class="product-button">Add to shopping cart</a>
             </div>
@@ -79,8 +80,12 @@
                 </div>
               </a>
               <div class="card-body">
-                <form action="">
-                  <input type="number" class="user-input" placeholder="Price">
+                <form class="form-group">
+                  <div class="form-head d-flex">
+                    <input type="number" class="user-input" placeholder="Price">
+                    <input type="text" class="user-input" placeholder="Tags">
+                  </div>
+                    
                   <input type="text" class="user-input" placeholder="Product name">
                   <input type="text" class="user-input" placeholder="Desciption">
                 </form>
