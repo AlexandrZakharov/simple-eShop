@@ -1,132 +1,79 @@
-let theOldestCat = [];
-function createCat(age, name) {
-  theOldestCat.push(age);
-  theOldestCat.sort((a, b) => b - a);
-  const cat = {
-    meow: function() {
-      return `My name is ${name}!`;
-    },
-    myAge: function() {
-      if(age < 10) {
-        return `My age is ${age}`;
-      } else return `I am too old...`;
-    },
-    myOrder: function() {
-      return `I am cat №${theOldestCat.indexOf(age) + 1} in family`;
-    }
-  }
-
-  return cat;
+function Shape() {
+  
 }
 
-const cat1 = createCat(5, 'Boris');
-const cat2 = createCat(10, 'Jora');
-const cat3 = createCat(11, 'Valera');
-const cat4 = createCat(3, 'Egor');
+// Polygon
+function Polygon() {}
+Polygon.prototype.draw = function() {}
+Polygon.prototype.getNumbersOfAngles = function() {
+  return this.anglesNumber;
+}
+Polygon.prototype.setNumbersOfAngles = function(num) {
+  this.anglesNumber = num;
+}
 
-console.log(theOldestCat);
-
-console.log(cat1.meow());
-console.log(cat3.myAge());
-console.log(cat1.myOrder());
-
-
-
-
-// function box(obj) {
-//   let userBox = {
-//       prop: obj,
-//       unbox: function() {
-//         if(this.prop.unbox === undefined) {
-//           return this.prop;
-//         }
-//         return this.prop.unbox();
-//     }
-//   }
-
-//   return userBox;
-// }
-
-// const box1 = box('Alex');
-// const box2 = box(box1);
-// const box3 = box(box2);
-
-// const box4 = box('Jora');
-// const box5 = box(box4);
-
-// console.log('Box4: ',box4);
-// console.log('Box5: ',box5);
-// console.log(box1.unbox());
+// Square
+function Square(sizeSize) {
+  this.sizeSize = sizeSize;
+}
+Square.prototype.getArea = function() {
+  return this.sizeSize * this.sizeSize;
+}
 
 
-
-// function createBird() {
-//   const bird = {
-//     distance: 0,
-//     fly: function(distance=0) {
-//       this.distance += distance;
-//       if(distance == 0) {
-//         this.distance += 1;
-//       }
-//       return this;
-//     },
-//     getDistance: function() {
-//       return this.distance;
-//     },
-//     compareWith: function(anotherBird) {
-//       if(this.distance > anotherBird.distance) {
-//         return 'I win';
-//       } else return 'Another bird win';
-//     }
-//   }
-
-//   return bird;
-// }
-
-// const bird1 = createBird();
-
-// bird1.fly();
-// bird1.fly(3);
-// bird1.fly().fly();
-// console.log(bird1.getDistance());
-
-// const bird2 = createBird();
-// bird2.fly();
-// bird2.fly(3);
-// console.log(bird2.getDistance());
-// console.log(bird2.compareWith(bird1));
-
-
-// function createBlock(obj) {
-//   const userBlock = {
-//     value: obj,
-//     next: null,
-//     getVal: function() {
-//       return this.value;
-//     },
-//     getNext: function() {
-//       return this.next;
-//     },
-//     link: function(newObject) {
-//       return this.next = newObject;
-//     }
-//   }
+function chain(...args) {
+  let reversed = args.reverse();
+  var c = [].shift.call(reversed),
+      len = reversed.length
+  while(len--) {
+      $.extend(c.prototype, new reversed[len]());
+  }
   
-//   return userBlock;
-// }
+  return reversed[0];
+}
 
-// const block = createBlock({ m: 'MVar' })
+chain(Square, Polygon, Shape);
 
-// console.log(block.getVal());
-// console.log(block.getNext());
+// const sqrt = new Square(2);
 
-// block.link(createBlock({ f: 'FVar' }));
+// console.log(sqrt.getArea())
+// Shape.prototype = Object.create(Polygon.prototype);
+// Shape.prototype.constructor = Shape;
 
-// console.log(block);
-// console.log(block.getVal());
-// // block.getNext().getVal()
-// // block.getNext().getNext()
+// Polygon.prototype = Object.create(Square.prototype);
+// Polygon.prototype.constructor = Polygon;
 
-// // block.getNext().link(createBlock({ sd: 'SDVar' }, { l: 'LVar' }))
-// // block.getNext().getVal()
-// // block.getNext().getNext().getVal()
+// Polygon.prototype = Object.create(Square.prototype);
+
+// Shape.prototype = Object.create(Polygon.prototype);
+// Polygon.prototype.constructor = Polygon;
+// Shape.prototype.constructor = Shape;
+
+
+// console.dir(Polygon)
+// console.log(Polygon.prototype)
+// console.log(Object.create(Polygon))
+// console.log(Object.create(Polygon.prototype))
+
+
+const shapel = new Shape();
+
+console.dir(shapel);
+
+console.log(shapel.draw)
+console.log(shapel.getArea)
+
+// console.dir(Square);
+// console.dir(Polygon);
+// console.dir(Shape);
+
+
+
+// const ExtendedSquare = chain(Square, Polygon, Shape);
+
+// console.dir(ExtendedSquare)
+
+// console.log(ExtendedSquare.getArea)
+// console.log(ExtendedSquare.setNumbersOfAngles)
+// console.log(ExtendedSquare.getNumbersOfAngles)
+// console.log(ExtendedSquare.draw)
