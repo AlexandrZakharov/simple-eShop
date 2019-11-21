@@ -64,42 +64,6 @@ input[type=text] {
   transform: scale(1.2);
 }
 
-/* ======== Dropdown menu ======== */
-
-.user-form {
-  margin: 0;
-  border-radius: 0;
-  min-width: 300px;
-  padding: 20px;
-  transition: 0.2s;
-}
-
-.user-btn {
-  display: block;
-  background: #222222;
-  border-radius: 4px;
-  font-size: 14px;
-  text-align: center;
-  margin: auto;
-  padding: 6px 0;
-  margin-top: 14px;
-  color: #B7B7B6;
-}
-
-.user-btn:hover {
-  background: #141414;
-  color: #fff;
-}
-
-.user-input {
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
-
 /* ======== Admin's dropdown menu ======== */
 
 .admin-dropdown {
@@ -286,35 +250,75 @@ input[type=text] {
   padding: 20px 20px;
 }
 
-/* ======== Star rating ======== */
+/* ======== Sign in ======== */
 
-.star-rating{
-	font-size: 0;
+.sign-in {
+  padding-top: 80px;
 }
-.star-rating__wrap{
-	display: inline-block;
-	font-size: 1rem;
+
+.sign-in__header {
+  text-align: center;
+  font-size: 20px;
 }
-.star-rating__wrap:after{
-	content: "";
-	display: table;
-	clear: both;
+
+.sign-in__body {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;
 }
-.star-rating__ico{
-	float: right;
-	padding-left: 2px;
-	cursor: pointer;
-	color: #FFB300;
+
+.user-form {
+  margin: 0;
+  border-radius: 0;
+
+  padding: 20px;
+  transition: 0.2s;
 }
-.star-rating__ico:last-child{
-	padding-left: 0;
+
+.user-btn {
+  display: block;
+  background: #222222;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+  padding: 6px 0;
+  margin-top: 14px;
+  color: #B7B7B6;
 }
-.star-rating__input{
-	display: none;
+
+.user-btn:hover {
+  background: #141414;
+  color: #fff;
 }
-.star-rating__ico:hover:before,
-.star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before
-{
-	content: "\f005";
+
+.user-input {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.create-acc {
+  margin-top: 12px;
+  border: 1px solid rgba(1, 1, 1, .1);
+  border-radius: 4px;
+  background: rgb(0, 0, 0, .1);
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* ======== Sign un ======== */
+
+.sign-up {
+  padding-top: 80px;
+}
+
+.register {
+  border: 1px solid rgba(1, 1, 1, .2);
+  border-radius: 4px;
+  background: #fff;
 }
