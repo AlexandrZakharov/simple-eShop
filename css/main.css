@@ -34,6 +34,10 @@ input[type=text] {
   transition: 0.2s;
 }
 
+.user-block__item {
+  margin-right: 20px;
+}
+
 .user-block__account {
   margin-right: 20px;
 }
