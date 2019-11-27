@@ -155,6 +155,11 @@ input[type=text] {
   overflow: hidden;
 }
 
+.card-img-wrapper img {
+  height: 100%;
+  width: auto;
+}
+
 .card-img-top {
   width: 100%;
   transition: 0.5s;
@@ -170,6 +175,7 @@ input[type=text] {
 
 .product-name {
   color: rgb(51, 51, 51);
+  font-weight: 600;
 }
 
 .product-description {

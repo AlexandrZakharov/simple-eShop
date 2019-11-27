@@ -17,10 +17,10 @@
     cardBody.className = 'card-body';
     card.append(cardBody);
 
-    const img = document.createElement('img');
-    img.setAttribute('src', product.img);
-    img.className = 'card-img-top'
-    cardImgWrapper.append(img);
+    const mainImg = document.createElement('img');
+    mainImg.setAttribute('src', product.img[0]);
+    mainImg.className = 'card-img-top'
+    cardImgWrapper.append(mainImg);
 
     const price = document.createElement('span');
     price.className = 'card-price';
