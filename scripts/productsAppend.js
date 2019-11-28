@@ -22,6 +22,18 @@
     mainImg.className = 'card-img-top'
     cardImgWrapper.append(mainImg);
 
+    const secondImg = document.createElement('img');
+    secondImg.setAttribute('src', product.img[1]);
+    secondImg.className = 'card-img-top'
+
+    cardImgWrapper.addEventListener('mouseover', ()=>{
+      mainImg.replaceWith(secondImg);
+    })
+
+    cardImgWrapper.addEventListener('mouseout', ()=>{
+      secondImg.replaceWith(mainImg);
+    })
+
     const price = document.createElement('span');
     price.className = 'card-price';
     price.innerText = `$${product.price}`;
