@@ -19,13 +19,16 @@
 
     const mainImg = document.createElement('img');
     mainImg.setAttribute('src', product.img[0]);
+    mainImg.setAttribute('alt', product.name);
     mainImg.className = 'card-img-top'
     cardImgWrapper.append(mainImg);
 
     const secondImg = document.createElement('img');
     secondImg.setAttribute('src', product.img[1]);
+    secondImg.setAttribute('alt', product.name);
     secondImg.className = 'card-img-top'
 
+    // Change the image on hover event
     cardImgWrapper.addEventListener('mouseover', ()=>{
       mainImg.replaceWith(secondImg);
     })
@@ -33,6 +36,8 @@
     cardImgWrapper.addEventListener('mouseout', ()=>{
       secondImg.replaceWith(mainImg);
     })
+
+    // =======================
 
     const price = document.createElement('span');
     price.className = 'card-price';

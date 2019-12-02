@@ -83,10 +83,6 @@ input[type=text] {
 
 /* ======== Register form ======== */
 
-.modal {
- 
-}
-
 .modal-dialog {
   width: 400px;
 }
@@ -204,21 +200,24 @@ input[type=text] {
 /* ======== Admin's Goods ======== */
 
 .delete-card {
-  color: #B7B7B6;
   position: absolute;
   top: 10px;
   right: 14px;
+  color: #B7B7B6;
+  height: 20px;
+  width: 20px;
+  text-align: center;
   transform: scale(1.6);
-  display: none;
+  /* display: none; */
 }
 
 .delete-card:hover {
   color: #3b3a3a;
 }
 
-.item:hover .delete-card {
+/* .item:hover .delete-card {
   display: block;
-}
+} */
 
 .add-product {
   display: flex;
