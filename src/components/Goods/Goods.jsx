@@ -1,19 +1,28 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import { Container } from '@material-ui/core';
 import style from './Goods.module.scss';
 import Product from './Product/Product';
-import { Container } from '@material-ui/core';
 
 
-const Goods = () => {
+const Goods = props => {
+  const products = props.data.map((product, i) => (
+    <Grid item lg={3} md={6}>
+      <Product
+        key={i}
+        img={product.img[0]}
+        name={product.name}
+        description={product.description}
+      />
+    </Grid>
+  ));
+
   return (
     <Container>
       <div className={style.goods}>
         <div className={style.goodsWrapper}>
           <Grid container spacing={3}>
-            <Grid item lg={3} md={6}>
-              <Product />
-            </Grid>
+            {products}
           </Grid>
         </div>
       </div>

@@ -11,7 +11,7 @@ import Rating from '@material-ui/lab/Rating';
 import style from './Product.module.scss';
 
 
-const Product = () => {
+const Product = (props) => {
   const [value, setValue] = React.useState(4);
 
   return (
@@ -20,22 +20,17 @@ const Product = () => {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Contemplative Reptile"
-            height="500"
-            image="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5801/5801312_sd.jpg"
-            title="Contemplative Reptile"
+            alt={props.name}
+            height="300"
+            image={props.img}
+            title={props.name}
             className={style.imgWrapper}
           />
           <CardContent>
             <Rating name="read-only" value={value} readOnly />
-            <Typography gutterBottom>
-              iPhone XR 64GB - Black (Sprint)
-            </Typography>
+            <Typography gutterBottom>{props.name}</Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Phone XR features the most advanced LCD in a smartphone - a
-              6.1-inch Liquid Retina display with industry-leading color
-              accuracy and an innovative backlight design that allows the screen
-              to stretch into the corners¹. Six stunning new finishes.
+              {props.description}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -45,7 +40,6 @@ const Product = () => {
           </Button>
         </CardActions>
       </Card>
-      
     </div>
   );
 };
