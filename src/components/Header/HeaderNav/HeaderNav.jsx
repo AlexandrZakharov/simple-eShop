@@ -6,13 +6,15 @@ import style from './HeaderNav.module.scss';
 const HeaderNav = props => {
   return (
     <div>
-      <div>
+      <div className="root">
         <Button color="inherit">
-          <Link to="/login" className={style.link}>{props.innerText}</Link>
+          <Link to="/loged" className={style.link}>
+            Login
+          </Link>
         </Button>
       </div>
     </div>
-  )
+  );
 }
 
 export default HeaderNav;

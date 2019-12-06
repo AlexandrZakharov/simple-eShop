@@ -21,17 +21,21 @@ const Product = () => {
           <CardMedia
             component="img"
             alt="Contemplative Reptile"
-            height="400"
+            height="500"
             image="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5801/5801312_sd.jpg"
             title="Contemplative Reptile"
             className={style.imgWrapper}
           />
           <CardContent>
             <Rating name="read-only" value={value} readOnly />
-            <Typography gutterBottom>Xiaomi Redmi Note 8 4GB/64GB</Typography>
+            <Typography gutterBottom>
+              iPhone XR 64GB - Black (Sprint)
+            </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Android, экран 6.3" IPS (1080x2340), Qualcomm Snapdragon 665, ОЗУ
-              4 ГБ, флэш-память 64 ГБ
+              Phone XR features the most advanced LCD in a smartphone - a
+              6.1-inch Liquid Retina display with industry-leading color
+              accuracy and an innovative backlight design that allows the screen
+              to stretch into the corners¹. Six stunning new finishes.
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -41,6 +45,7 @@ const Product = () => {
           </Button>
         </CardActions>
       </Card>
+      
     </div>
   );
 };
