@@ -14,7 +14,10 @@ const App = props => (
         path="/"
         render={() => <UnlogedUser data={props.state.goods} />}
       />
-      <Route path="/loged" render={() => <LogedUser />} />
+      <Route
+        path="/loged"
+        render={() => <LogedUser data={props.state.goods} />}
+      />
     </div>
   </BrowserRouter>
 );

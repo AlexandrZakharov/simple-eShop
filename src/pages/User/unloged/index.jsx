@@ -3,7 +3,7 @@ import Goods from '../../../components/Goods/Goods';
 
 const UnlogedUser = props => (
   <div>
-    <Goods data={props.data} />
+    <Goods data={props.data} active="false" />
   </div>
 );
 

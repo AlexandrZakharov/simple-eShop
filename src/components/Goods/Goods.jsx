@@ -13,6 +13,8 @@ const Goods = props => {
         img={product.img[0]}
         name={product.name}
         description={product.description}
+        active={props.active}
+        stars={0}
       />
     </Grid>
   ));

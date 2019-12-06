@@ -11,8 +11,19 @@ import Rating from '@material-ui/lab/Rating';
 import style from './Product.module.scss';
 
 
-const Product = (props) => {
-  const [value, setValue] = React.useState(4);
+const Product = props => {
+  const [value, setValue] = React.useState(props.stars);
+
+  const rating = (props.active === 'true') ? (
+    <Rating
+      name="simple-controlled"
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+    />
+  ) : <Rating value={value} readOnly />;
+
 
   return (
     <div className={style.product}>
@@ -27,7 +38,7 @@ const Product = (props) => {
             className={style.imgWrapper}
           />
           <CardContent>
-            <Rating name="read-only" value={value} readOnly />
+            {rating}
             <Typography gutterBottom>{props.name}</Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {props.description}
