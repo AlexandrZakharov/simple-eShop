@@ -6,7 +6,8 @@ import Product from './Product/Product';
 
 
 const Goods = props => {
-  const products = props.data.map((product, i) => (
+
+  const products = props.state.map((product, i) => (
     <Grid item lg={3} md={6}>
       <Product
         key={i}

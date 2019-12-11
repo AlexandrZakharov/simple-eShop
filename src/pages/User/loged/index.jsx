@@ -3,7 +3,7 @@ import Goods from '../../../components/Goods/Goods';
 
 const UnlogedUser = props => (
   <div>
-    <Goods data={props.data} active="true" price="1200" />
+    <Goods state={props.state.goods} active="true" price="1200" />
   </div>
 );
 
