@@ -7,19 +7,22 @@ import './Header.scss';
 import { Route } from 'react-router-dom';
 import HeaderNav from './HeaderNav/HeaderNav';
 
-const Header = (props) => (
-  <div className="root">
+const Header = (props) => {
+
+  return (
+    <div className="root">
     <AppBar position="static" className="appbar">
       <Container fixed>
         <Toolbar className="toolbar">
           <Typography variant="h6" className="title">
             e-Shop
           </Typography>
-          <HeaderNav />
+          <HeaderNav text={props.text} link={props.link} />
         </Toolbar>
       </Container>
     </AppBar>
   </div>
-);
+  )
+}
 
 export default Header;

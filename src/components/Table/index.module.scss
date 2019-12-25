@@ -1,0 +1,16 @@
+.root {
+    width: 100%;
+    overflow: auto;
+
+    .table {
+        min-width: 650px;
+
+        .head {
+            background: rgb(240, 240, 240);
+            
+            &__item {
+                font-weight: 700;
+            }
+        }
+    }
+}

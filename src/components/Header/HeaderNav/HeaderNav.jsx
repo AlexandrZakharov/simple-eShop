@@ -7,8 +7,8 @@ const HeaderNav = props => (
   <div>
     <div className="root">
       <Button color="inherit">
-        <Link to="/loged" className={style.link}>
-          Login
+        <Link to={props.link} className={style.link}>
+          {props.text}
         </Link>
       </Button>
     </div>

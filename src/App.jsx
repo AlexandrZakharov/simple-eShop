@@ -4,14 +4,15 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import UnlogedUser from './pages/User/unloged';
 import LogedUser from './pages/User/loged';
+import UserListTable from './components/Table/index';
+import SignIn from './components/signinForm';
+import Register from './components/registerForm';
 
 const App = props => {
-  // // eslint-disable-next-line no-debugger
-  // debugger;
+
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header className="Header" />
+      <div className="App">  
         <Route
           exact
           path="/"
@@ -20,6 +21,12 @@ const App = props => {
         <Route
           path="/loged"
           render={() => <LogedUser state={props.state.goodsPage} />}
+        />
+        <Route path="/login" render={() => <SignIn />} />
+        <Route path="/register" render={() => <Register />} />
+        <Route
+          path="/admin-panel"
+          render={() => <UserListTable state={props.state.adminPanelPage.users} dispatch={props.dispatch} />}
         />
       </div>
     </BrowserRouter>
