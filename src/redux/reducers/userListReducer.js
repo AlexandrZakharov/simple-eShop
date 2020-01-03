@@ -1,3 +1,6 @@
+/* eslint-disable no-debugger */
+import { REMOVE_USER, ADD_USER } from '../actionTypes';
+console.log(REMOVE_USER)
 const initialState = {
   users: [
     {
@@ -45,20 +48,18 @@ const initialState = {
 
 const userListReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "REMOVE-USER":
-
-      state.users = state.users.filter((user) => user.id != action.user)
-      console.log(state.users)
-      return state.users
+    case REMOVE_USER:
+      state.users = state.users.filter(user => user.id !== action.user)
+      return state;
     default:
-      return state
+      return state;
   }
 };
 
-export const removeUserActionCreator = (user) => {
+export const removeUserActionCreator = user => {
   return {
-		type: "REMOVE-USER",
-		user: user
+    type: REMOVE_USER,
+    user: user
   };
 };
 

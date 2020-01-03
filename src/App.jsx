@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
 import UnlogedUser from './pages/User/unloged';
 import LogedUser from './pages/User/loged';
 import UserListTable from './components/Table/index';
@@ -9,7 +8,6 @@ import SignIn from './components/signinForm';
 import Register from './components/registerForm';
 
 const App = props => {
-
   return (
     <BrowserRouter>
       <div className="App">  

@@ -1,37 +1,23 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import style from "./index.module.scss";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 import Container from '@material-ui/core/Container';
-import {removeUserActionCreator} from '../../redux/reducers/userListReducer';
+import Paper from '@material-ui/core/Paper';
+import style from './index.module.scss';
+import { removeUserActionCreator } from '../../redux/reducers/userListReducer';
 import Header from '../Header/Header';
+import User from './User';
 
 const UserListTable = props => {
-
-  const removeUser = (event) => {
-    console.log(event.currentTarget.id)
-    props.dispatch(removeUserActionCreator(event.currentTarget.id))
-  }
-  
-  const users = props.state.map((user, i) => {
-    return (
-      <TableRow key={i}>
-        <TableCell component="th" scope="row">{user.id}</TableCell>
-        <TableCell align="center">{user.firstName}</TableCell>
-        <TableCell align="center">{user.lastName}</TableCell>
-        <TableCell align="center">{user.eMail}</TableCell>
-        <TableCell align="center">{(user.removeRequest) ? (<Button onClick={removeUser} id={user.id} variant="contained" color="secondary">Remove</Button>): ''}</TableCell>
-      </TableRow>
-    )
-  })
+  const removeUser = event => {
+    props.dispatch(removeUserActionCreator(+event.currentTarget.id));
+  };
   return (
     <div>
-      <Header text={"Logout"} link={'/'} />
+      <Header text="Logout" link="/" />
       <Container>
         <Paper className={style.root}>
           <Table className={style.table} aria-label="simple table">
@@ -52,7 +38,7 @@ const UserListTable = props => {
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>{users}</TableBody>
+            <TableBody>{props.state.map(user => (<User userInfo={user} remove={removeUser} />))}</TableBody>
           </Table>
         </Paper>
       </Container>
