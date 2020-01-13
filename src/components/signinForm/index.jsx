@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -46,8 +47,21 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignIn() {
+
+const SignIn = props => {
   const classes = useStyles();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  let link = React.createRef();
+  if(props.redirect) link.setAttribute('to', '/loged')
+
+  const checkUser = () => {
+    props.checkUser({
+      email: email,
+      password: password
+    })
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -70,6 +84,8 @@ export default function SignIn() {
             name="email"
             autoComplete="email"
             autoFocus
+            value={email}
+            onChange={e => setEmail(e.target.value)}
           />
           <TextField
             variant="outlined"
@@ -81,19 +97,22 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
 
-          <Link to="/loged">
+          <Link ref={link}>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={checkUser}
             >Sign In</Button>
           </Link>
           <Grid container>
@@ -109,3 +128,5 @@ export default function SignIn() {
     </Container>
   );
 }
+
+export default SignIn;

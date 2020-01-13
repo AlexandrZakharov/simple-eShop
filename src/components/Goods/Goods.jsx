@@ -4,13 +4,11 @@ import { Container } from '@material-ui/core';
 import style from './Goods.module.scss';
 import Product from './Product/Product';
 
-
 const Goods = props => {
 
-  const products = props.state.map((product, i) => (
+  const fillProducts = props.products.map(product => (
     <Grid item lg={3} md={6}>
       <Product
-        key={i}
         img={product.img[0]}
         name={product.name}
         description={product.description}
@@ -25,7 +23,7 @@ const Goods = props => {
       <div className={style.goods}>
         <div className={style.goodsWrapper}>
           <Grid container spacing={3}>
-            {products}
+            {fillProducts}
           </Grid>
         </div>
       </div>

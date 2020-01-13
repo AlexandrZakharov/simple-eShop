@@ -7,14 +7,11 @@ import TableRow from '@material-ui/core/TableRow';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import style from './index.module.scss';
-import { removeUserActionCreator } from '../../redux/reducers/userListReducer';
 import Header from '../Header/Header';
 import User from './User';
 
 const UserListTable = props => {
-  const removeUser = event => {
-    props.dispatch(removeUserActionCreator(+event.currentTarget.id));
-  };
+  const completeTheTable = props.users.map(user => (<User userInfo={user} remove={props.removeUser} />))
   return (
     <div>
       <Header text="Logout" link="/" />
@@ -38,7 +35,7 @@ const UserListTable = props => {
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>{props.state.map(user => (<User userInfo={user} remove={removeUser} />))}</TableBody>
+            <TableBody>{completeTheTable}</TableBody>
           </Table>
         </Paper>
       </Container>
